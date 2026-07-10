@@ -1,38 +1,36 @@
-# RushAEO // Forensic Article 50 Compliance & AI Verification Registry
+# RushAEO // Technical Forensic Registry
 
-🛡️ **Continuous automated technical forensic website gap-analysis for EU AI Act Article 50 compliance.**
+**Status:** `Live` | **Framework:** `V-I-N-G` | **Compliance:** `EU AI Act Article 50`
 
-Under Article 50 of the EU AI Act, deploying unmapped conversational assistants, synthetic widgets, or generative copy tools live on a public domain without compliant user disclosure notices carries structural corporate penalties of up to **€7.5M or 1.5% of global turnover**. 
-
-RushAEO systematically audits user interfaces against a proprietary **43-point V-I-N-G Standard framework** to discover, isolate, and remediate compliance gaps before enforcement strikes.
-
-[🌐 Access the Active Ingestion Engine](https://rushaeo.com)
+RushAEO is an automated forensic registry service designed to mitigate €7.5M+ regulatory exposure risk for enterprises deploying generative conversational agents. We provide a frictionless, point-in-time technical audit framework that eliminates the need for legacy account management through stateless security protocols.
 
 ---
 
-## ⚡ The Architecture
+## The Regulatory Threat: Article 50
+Under the **EU AI Act**, deploying unmapped conversational assistants or synthetic copy widgets without compliant user disclosure notices carries massive corporate liability. 
 
-This repository contains the stateless frontend container, telemetry schema, and Generative Engine Optimization (GEO) configurations for the RushAEO Registry.
+RushAEO eliminates this exposure by establishing a **Protection Loop** that automates visibility and disclosure compliance for every synthetic touchpoint.
 
-* **Zero Data Retention (ZDR):** Every single website footprint evaluation is executed within an ephemeral cloud sandbox container. The millisecond the compliance report is compiled and dispatched, the container self-destructs. No databases, no cached text assets.
-* **The V-I-N-G Index:** Evaluates exact technical coordinates across four critical regulatory pillars:
-    * **V**isibility of conversational interfaces.
-    * **I**dentification of synthetic systems.
-    * **N**otice compliance parameters.
-    * **G**overnance execution trails.
+## The V-I-N-G Standard (43-Point Audit)
+Our proprietary forensic engine evaluates synthetic assets across the four pillars of the V-I-N-G framework:
 
-## 🚀 How It Works (The Ingestion Loop)
+*   **V (Visibility Matrix):** Algorithmic discovery, model indexing parameters, and generator crawl mapping.
+*   **I (Interpretation Layers):** Semantic ingestion readiness and schema structural integrity.
+*   **N (Narrative Control):** Synthetic citation patterns, contextual attribution, and content synthesis vectors.
+*   **G (Governance Guardrails):** Validates direct alignment with EU AI Act Article 50 transparent synthetic output configurations and machine-readable data structures.
 
-1. **Telemetry Transit:** The client initiates a point-in-time forensic scan by submitting their target domain via the secure injection portal.
-2. **Remediation Blueprinting:** If the digital footprint fails a single checkpoint on our 43-point standard, the runtime instantly calculates a customized technical fix.
-3. **Artifact Delivery:** A timestamped, immutable administrative defense PDF artifact is delivered directly to the operator's inbox within 60 seconds.
+## Sovereign Infrastructure
+*   **Zero Data Retention (ZDR):** The platform is engineered with a stateless architecture. We do not manage account databases, store passwords, or track session logs.
+*   **Email-as-Access-Key:** We use your verified email address as the secure, temporary access token for your point-in-time forensic scan. 
+*   **Frictionless Auditing:** Enterprise operators execute scans by providing a target URL and a verified communication link, ensuring a zero-footprint audit chain.
 
-## 🤝 Enterprise & API Access
+## Usage
+1.  **Register:** Enter target business domain and verified email link via the gateway.
+2.  **Initiate:** Activate the Monthly Protection Loop for automated, ongoing compliance monitoring.
+3.  **Audit:** Receive instant artifacts detailing the V-I-N-G compliance evaluation.
 
-The active multi-agent auditing engine, batch ingestion features, and PDF artifact compilation loops are managed exclusively within our isolated, enterprise-grade production environment. 
-
-For high-volume brand evaluations, custom pipeline integrations, or technical infrastructure inquiries, contact our security register:
-📧 **support@rushaeo.com**
+## Legal & Compliance Note
+RushAEO provides forensic evaluation and data governance tools. This platform does not assume the role of an Authorized Representative or legal counsel. Clients remain responsible for their own Declaration of Conformity and final regulatory filings.
 
 ---
-© 2026 RUSH_AEO SECURITY. REGULATION SURVIVAL ARCHITECTURE. CODENAME: ANTIGRAVITY RUNTIME.
+*© 2026 RUSHAEO. Sovereign Systems Security. All Rights Reserved.*
