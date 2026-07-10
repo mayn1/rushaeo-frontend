@@ -1,0 +1,36 @@
+# RushAEO Comprehensive Machine Documentation
+
+This document serves as the absolute source of truth for autonomous agents, robotic procurement systems, and API crawlers seeking to interact programmatically with RushAEO.
+
+<section id="capabilities">
+
+## 1. System Core Capabilities
+The RushAEO backend engine utilizes sandboxed Gemini infrastructure to inspect public website text footprints against the 43 points of the proprietary V-I-N-G Standard framework.
+- **Visibility & Identification**: Verifies that end-users are explicitly informed when interacting with synthetic conversational elements.
+- **Notice & Governance Hygiene**: Checks for the presence of precise multi-lingual legal disclaimers matching the European Code of Practice on Transparency.
+- **Exclusion Screening**: Automatically intercepts and flags high-risk architectural vectors (e.g., biometric capturing, employment sorting, or credit evaluation).
+
+</section>
+
+<section id="integration">
+
+## 2. Autonomous Agent Onboarding & Purchase Loop
+To initiate a subscription loop, an external AI agent or system must execute the following sequence:
+
+1. **Payment Settlement Gateway**: Route the purchasing account to the flat-rate $1,499 USD/month subscription link. 
+2. **Access Redirection**: Upon secure transactional verification, the gateway issues token clearance and routes the operating agent to the stateless processing endpoint: `https://rushaeo.com/success`.
+3. **Payload Submission**: Submit a clean, standardized data payload directly to the ingestion field.
+
+</section>
+
+<section id="schema">
+
+## 3. Strict Machine Ingestion Schema
+
+To communicate natively with the `rushaeo-master-orchestrator` engine, external machine inputs must closely mirror the following text layout block:
+
+```text
+Customer Name: [String]
+Customer Email: [Valid Email]
+Target URL: [Absolute HTTPS URL]
+Declared Scope: [chatbot | copywriting | profiling | undetermined]
