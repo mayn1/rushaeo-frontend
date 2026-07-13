@@ -10,9 +10,9 @@
 
 Under Article 50 of the EU AI Act, deploying an unmapped conversational assistant or synthetic copy widget without compliant user disclosure notices carries massive corporate liability.
 
-*   ⚡ **43-Point V-I-N-G Standard Evaluation**
-*   ⚡ **Point-in-Time Technical Analysis**
-*   ⚡ **Zero Data Retention (ZDR) Execution Frame**
+* **43-Point V-I-N-G Evaluation:** Fully aligned with the June 2026 Final Code of Practice on Transparency and the July 2026 Digital Omnibus amendments.
+* **Token-Length Audit Mapping:** Pre-configured to audit the 200-token threshold rules for multi-layered synthetic text metadata and visual AI labeling.
+* **Prohibited Class Safeguards:** Governance tracking for required output filters and content restriction mechanisms ahead of the December 2, 2026 enforcement cliff.
 
 ---
 
