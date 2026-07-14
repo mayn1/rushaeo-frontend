@@ -144,15 +144,8 @@
                 <div class="lg:col-span-5 bg-slate-900/40 border border-slate-800/80 rounded-2xl p-8 backdrop-blur-xl shadow-2xl shadow-indigo-500/5">
                     <h3 class="text-xs font-bold text-slate-300 tracking-wider uppercase mb-6 mono-text">// System Audit Ingestion</h3>
                     
+                    <!-- Streamlined Zero-Friction URL Only Form -->
                     <form class="space-y-4 text-xs">
-                        <div class="space-y-1.5">
-                            <label class="block uppercase font-semibold text-slate-400 tracking-wider">Full Name</label>
-                            <input type="text" id="customerName" required placeholder="e.g. John Doe" class="w-full p-3 rounded-xl border border-slate-800 bg-slate-950 text-white placeholder-slate-700 focus:outline-none focus:border-indigo-500 transition-colors">
-                        </div>
-                        <div class="space-y-1.5">
-                            <label class="block uppercase font-semibold text-slate-400 tracking-wider">Business Email</label>
-                            <input type="email" id="customerEmail" required placeholder="e.g. john@saasco.com" class="w-full p-3 rounded-xl border border-slate-800 bg-slate-950 text-white placeholder-slate-700 focus:outline-none focus:border-indigo-500 transition-colors">
-                        </div>
                         <div class="space-y-1.5">
                             <label class="block uppercase font-semibold text-slate-400 tracking-wider">Target Business URL</label>
                             <input type="text" id="targetUrl" required placeholder="e.g. ebay.com" class="w-full p-3 rounded-xl border border-slate-800 bg-slate-950 text-white placeholder-slate-700 focus:outline-none focus:border-indigo-500 transition-colors">
@@ -329,7 +322,8 @@
 
 </body>
 <script>
-  const auditForm = document.querySelector('form');
+  // Target the paid ingestion form specifically, ignoring the free scanner form
+  const auditForm = document.querySelector('form:not(#free-scanner-form)');
   
   if (auditForm) {
     auditForm.removeAttribute('action');
@@ -340,23 +334,22 @@
       let rawUrl = document.getElementById('targetUrl')?.value || '';
       rawUrl = rawUrl.trim();
 
+      if (!rawUrl) {
+        alert('Please fill out the URL field.');
+        return;
+      }
+
       // Ensure URL protocol format standardizes nicely behind the scenes for processing
       let structuredUrl = rawUrl;
       if (structuredUrl && !/^https?:\/\//i.test(structuredUrl)) {
         structuredUrl = 'https://' + structuredUrl;
       }
 
+      // Streamlined telemetry transmission payload containing only the target URL
       const payload = {
-        customerName: document.getElementById('customerName')?.value || 'Enterprise Operator',
-        customerEmail: document.getElementById('customerEmail')?.value || '',
         targetUrl: structuredUrl,
         declaredAiScope: ['chatbot', 'recruitment', 'biometrics', 'analytics', 'marketing_automation'] 
       };
-
-      if (!payload.customerEmail || !rawUrl) {
-        alert('Please fill out all required fields.');
-        return;
-      }
 
       try {
         const submitBtn = auditForm.querySelector('button[type="submit"]');
