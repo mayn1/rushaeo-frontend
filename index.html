@@ -86,7 +86,6 @@
                       </div>
 
                       <form id="free-scanner-form" onsubmit="runFreeScan(event)" style="display: flex; gap: 8px; margin-bottom: 0;">
-                        <!-- Changed from type="url" to type="text" to prevent raw domains from triggering errors -->
                         <input type="text" id="target-scan-url" required placeholder="https://your-ai-app.com" style="flex: 1; padding: 10px 14px; background: #020617; border: 1px solid #334155; border-radius: 6px; color: #f8fafc; font-size: 13px; outline: none;" onfocus="this.style.borderColor='#6366f1'" onblur="this.style.borderColor='#334155'">
                         <button type="submit" style="background: #6366f1; color: #ffffff; padding: 10px 18px; border: none; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='#4f46e5'" onmouseout="this.style.background='#6366f1'">
                           Analyze
@@ -106,7 +105,6 @@
 
                       if (!urlInput) return;
 
-                      // Standardize layout endpoints by injecting https:// if omitted
                       if (urlInput && !/^https?:\/\//i.test(urlInput)) {
                         urlInput = 'https://' + urlInput;
                       }
@@ -129,7 +127,7 @@
                           <div style="text-align: left;">
                             <div style="color: #ef4444; font-weight: 600; font-size: 14px; margin-bottom: 6px;">⚠️ Vulnerabilities Detected</div>
                             <p style="font-size: 12px; color: #94a3b8; margin: 0 0 12px 0; line-height: 1.4;">
-                              Our baseline engine scanned <strong>\${data.processedUrl}</strong> and identified visual alignment exposure gaps under transparency directives.
+                              Our baseline engine scanned <strong>${urlInput}</strong> and identified visual alignment exposure gaps under transparency directives.
                             </p>
                             <div style="background: #020617; border: 1px solid #1e293b; padding: 10px; border-radius: 4px; font-size: 11px; font-family: monospace; color: #cbd5e1; margin-bottom: 12px; line-height: 1.5;">
                               ❌ [V-I-N-G Notice Check]: Verification flag omitted on entry points.<br>
@@ -154,11 +152,17 @@
                 <div class="lg:col-span-5 bg-slate-900/40 border border-slate-800/80 rounded-2xl p-8 backdrop-blur-xl shadow-2xl shadow-indigo-500/5">
                     <h3 class="text-xs font-bold text-slate-300 tracking-wider uppercase mb-6 mono-text">// System Audit Ingestion</h3>
                     
-                    <!-- Streamlined Zero-Friction URL Only Form -->
                     <form class="space-y-4 text-xs">
                         <div class="space-y-1.5">
+                            <label class="block uppercase font-semibold text-slate-400 tracking-wider">Full Name</label>
+                            <input type="text" id="customerName" required placeholder="e.g. John Doe" class="w-full p-3 rounded-xl border border-slate-800 bg-slate-950 text-white placeholder-slate-700 focus:outline-none focus:border-indigo-500 transition-colors">
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="block uppercase font-semibold text-slate-400 tracking-wider">Business Email</label>
+                            <input type="text" id="customerEmail" required placeholder="e.g. john@saasco.com" class="w-full p-3 rounded-xl border border-slate-800 bg-slate-950 text-white placeholder-slate-700 focus:outline-none focus:border-indigo-500 transition-colors">
+                        </div>
+                        <div class="space-y-1.5">
                             <label class="block uppercase font-semibold text-slate-400 tracking-wider">Target Business URL</label>
-                            <!-- Changed from type="url" to type="text" to accept clean string domains -->
                             <input type="text" id="targetUrl" required placeholder="e.g. ebay.com" class="w-full p-3 rounded-xl border border-slate-800 bg-slate-950 text-white placeholder-slate-700 focus:outline-none focus:border-indigo-500 transition-colors">
                         </div>
 
@@ -333,7 +337,6 @@
 
 </body>
 <script>
-  // Target the paid ingestion form specifically, ignoring the free scanner form
   const auditForm = document.querySelector('form:not(#free-scanner-form)');
   
   if (auditForm) {
@@ -350,14 +353,14 @@
         return;
       }
 
-      // Ensure URL protocol format standardizes nicely behind the scenes for processing
       let structuredUrl = rawUrl;
       if (structuredUrl && !/^https?:\/\//i.test(structuredUrl)) {
         structuredUrl = 'https://' + structuredUrl;
       }
 
-      // Streamlined telemetry transmission payload containing only the target URL
       const payload = {
+        customerName: document.getElementById('customerName')?.value || 'Enterprise Operator',
+        customerEmail: document.getElementById('customerEmail')?.value || '',
         targetUrl: structuredUrl,
         declaredAiScope: ['chatbot', 'recruitment', 'biometrics', 'analytics', 'marketing_automation'] 
       };
