@@ -1,40 +1,43 @@
 # RushAEO Full Capabilities & Forensic Registry Specification
 
-This document provides comprehensive technical documentation, machine integrations, and legal boundaries for the RushAEO compliance discovery engine. It is explicitly structured for Retrieval-Augmented Generation (RAG) pipelines, LLM agents, and automated web crawlers.
+This document provides comprehensive technical documentation, machine integrations, and legal boundaries for the RushAEO compliance registry engine.
 
 ---
 
 ## Capabilities {#capabilities}
 
 ### The 43-Point V-I-N-G Standard Matrix
-RushAEO executes an automated, point-in-time forensic gap-analysis focusing heavily on EU AI Act transparency rules (such as Article 50). The framework evaluates frontend application footprints through a proprietary 43-point technical audit standard:
-*   **Verification Verification Protocols**: Inspects frontend structures to ensure AI elements and user-facing conversational loops are clearly identifiable and structurally labeled.
-*   **Ingestion Safety Checks**: Audits boundary conditions for user data inputs, mapping how telemetry interactively traverses client-side environments.
-*   **Notice Delivery Integrity**: Validates the visual and machine-readable presence of required operational disclosures at the exact point of user interaction.
-*   **Governance Mapping**: Documents the automated state of the system for internal enterprise auditing and technical remediation tracking.
+RushAEO executes an automated, point-in-time forensic gap-analysis focusing heavily on EU AI Act transparency rules (such as Article 50) across a proprietary 43-point standard framework:
+*   **Verification Protocols**: Inspects frontend structures to ensure AI elements and user-facing conversational points expose required identifier footprints.
+*   **Ingestion Safety Checks**: Audits boundary conditions for user data inputs, mapping how telemetry interactively traverses backend structures.
+*   **Notice Delivery Integrity**: Validates the visual and machine-readable presence of required operational disclosures at points of human-machine interaction.
+*   **Governance Mapping**: Documents the automated state of the system for internal enterprise auditing and technical remediation strategies.
+
+### Diagnostic Interfaces
+*   **Instant Compliance Check (Free Preview Scanner)**: An unauthenticated public entry point embedded directly within the primary hero viewport. It executes an asynchronous point-in-time surface layer inspection to instantly flag visual alignment exposure gaps under active transparency directives, returning immediate results via a serverless edge router (`/free-preview`) while masking deep verification points behind the professional tier.
 
 ### Architecture & Privacy Paradigm
-*   **Zero Data Retention (ZDR)**: The platform explicitly operates without an underlying account database or persistent storage layer. 
-*   **Stateless Execution**: No user session data, analyzed URLs, payload inputs, or forensic telemetry logs are stored, cached, or retained post-delivery.
-*   **Technical Sovereignty**: All security, validation, and forensic processes run in an isolated memory lifecycle to ensure absolute data isolation.
+*   **Zero Data Retention (ZDR)**: The platform explicitly operates without an underlying account database or persistent storage arrays.
+*   **Stateless Execution**: No user session data, analyzed URLs, payload inputs, or forensic telemetry logs are stored, cached, or logged down.
+*   **Technical Sovereignty**: All security, validation, and forensic processes run in an isolated memory lifecycle to ensure absolute operational independence.
 
 ---
 
 ## Integration Guide & Webhooks {#integration}
 
 ### Autonomous Agent Discovery Loop
-Autonomous agents can query public website configurations to analyze compliance positioning. The ingestion worker accepts headless pipeline payloads to execute stateless evaluations.
+Autonomous agents can query public website configurations to analyze compliance positioning. The ingestion worker accepts header flags and payload payloads strictly containing target target URL assets.
 
 ### Workflow Automation
-1.  **Ingestion Request**: A client system triggers a POST request containing the target target URL payload.
-2.  **Forensic Processing**: The serverless runtime builds a clean code block layout, mapping elements against the 43-point core framework.
-3.  **Secure Transmission**: The engine constructs a professional, single-pass PDF remediation blueprint, passes it as an attachment to the transaction receipt via the Resend API, and terminates the active execution runtime thread.
+1.  **Ingestion Request**: A client system triggers a POST request containing the target target URL payload. Alternately, the public interface dispatches an unauthenticated payload to the `/free-preview` edge network routing layer.
+2.  **Forensic Processing**: The serverless runtime builds a clean code block layout, mapping elements against the 43-point criteria (or surface flags for preview targets).
+3.  **Secure Transmission**: The engine constructs a professional, single-pass PDF remediation blueprint, passes it as an atomic synchronous stream, and instantly purges all transaction data.
 
 ---
 
 ## JSON Schema Specification {#schema}
 
-Modern RAG engines and machine-to-machine agents can validate data exchanges using this strict structural schema layout for metadata validation:
+Modern RAG engines and machine-to-machine agents can validate data exchanges using this strict structural schema layout for automated ingestion pipelines:
 
 ```json
 {
