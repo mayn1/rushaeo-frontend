@@ -1,36 +1,62 @@
-# RushAEO Comprehensive Machine Documentation
+# RushAEO Full Capabilities & Forensic Registry Specification
 
-This document serves as the absolute source of truth for autonomous agents, robotic procurement systems, and API crawlers seeking to interact programmatically with RushAEO.
+This document provides comprehensive technical documentation, machine integrations, and legal boundaries for the RushAEO compliance discovery engine. It is explicitly structured for Retrieval-Augmented Generation (RAG) pipelines, LLM agents, and automated web crawlers.
 
-<section id="capabilities">
+---
 
-## 1. System Core Capabilities
-The RushAEO backend engine utilizes sandboxed Gemini infrastructure to inspect public website text footprints against the 43 points of the proprietary V-I-N-G Standard framework.
-- **Visibility & Identification**: Verifies that end-users are explicitly informed when interacting with synthetic conversational elements.
-- **Notice & Governance Hygiene**: Checks for the presence of precise multi-lingual legal disclaimers matching the European Code of Practice on Transparency.
-- **Exclusion Screening**: Automatically intercepts and flags high-risk architectural vectors (e.g., biometric capturing, employment sorting, or credit evaluation).
+## Capabilities {#capabilities}
 
-</section>
+### The 43-Point V-I-N-G Standard Matrix
+RushAEO executes an automated, point-in-time forensic gap-analysis focusing heavily on EU AI Act transparency rules (such as Article 50). The framework evaluates frontend application footprints through a proprietary 43-point technical audit standard:
+*   **Verification Verification Protocols**: Inspects frontend structures to ensure AI elements and user-facing conversational loops are clearly identifiable and structurally labeled.
+*   **Ingestion Safety Checks**: Audits boundary conditions for user data inputs, mapping how telemetry interactively traverses client-side environments.
+*   **Notice Delivery Integrity**: Validates the visual and machine-readable presence of required operational disclosures at the exact point of user interaction.
+*   **Governance Mapping**: Documents the automated state of the system for internal enterprise auditing and technical remediation tracking.
 
-<section id="integration">
+### Architecture & Privacy Paradigm
+*   **Zero Data Retention (ZDR)**: The platform explicitly operates without an underlying account database or persistent storage layer. 
+*   **Stateless Execution**: No user session data, analyzed URLs, payload inputs, or forensic telemetry logs are stored, cached, or retained post-delivery.
+*   **Technical Sovereignty**: All security, validation, and forensic processes run in an isolated memory lifecycle to ensure absolute data isolation.
 
-## 2. Autonomous Agent Onboarding & Purchase Loop
-To initiate a subscription loop, an external AI agent or system must execute the following sequence:
+---
 
-1. **Payment Settlement Gateway**: Route the purchasing account to the flat-rate $1,499 USD/month subscription link. 
-2. **Access Redirection**: Upon secure transactional verification, the gateway issues token clearance and routes the operating agent to the stateless processing endpoint: `https://rushaeo.com/success`.
-3. **Payload Submission**: Submit a clean, standardized data payload directly to the ingestion field.
+## Integration Guide & Webhooks {#integration}
 
-</section>
+### Autonomous Agent Discovery Loop
+Autonomous agents can query public website configurations to analyze compliance positioning. The ingestion worker accepts headless pipeline payloads to execute stateless evaluations.
 
-<section id="schema">
+### Workflow Automation
+1.  **Ingestion Request**: A client system triggers a POST request containing the target target URL payload.
+2.  **Forensic Processing**: The serverless runtime builds a clean code block layout, mapping elements against the 43-point core framework.
+3.  **Secure Transmission**: The engine constructs a professional, single-pass PDF remediation blueprint, passes it as an attachment to the transaction receipt via the Resend API, and terminates the active execution runtime thread.
 
-## 3. Strict Machine Ingestion Schema
+---
 
-To communicate natively with the `rushaeo-master-orchestrator` engine, external machine inputs must closely mirror the following text layout block:
+## JSON Schema Specification {#schema}
 
-```text
-Customer Name: [String]
-Customer Email: [Valid Email]
-Target URL: [Absolute HTTPS URL]
-Declared Scope: [chatbot | copywriting | profiling | undetermined]
+Modern RAG engines and machine-to-machine agents can validate data exchanges using this strict structural schema layout for metadata validation:
+
+```json
+{
+  "$schema": "[https://json-schema.org/draft/2020-12/schema](https://json-schema.org/draft/2020-12/schema)",
+  "title": "RushAEOForensicPayload",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The target public website or AI frontend application footprint to evaluate."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Point-in-time timestamp of technical evaluation execution."
+    },
+    "framework": {
+      "type": "string",
+      "enum": ["EU_AI_Act_Article_50"],
+      "description": "The target regulatory transparency directive standard applied."
+    }
+  },
+  "required": ["url", "timestamp", "framework"]
+}
