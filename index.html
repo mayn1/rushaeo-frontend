@@ -426,17 +426,17 @@ async function runFreeScan(event) {
     const data = await response.json();
     
     // 3. Render Hook / Partial Paywall Display
-    resultsWindow.style.borderColor = '#fca5a5';
-    resultsWindow.style.background = '#fff5f5';
+    resultsWindow.style.borderColor = '#222222';
+    resultsWindow.style.background = '#000000';
     statusText.innerHTML = `
       <div style="text-align: left;">
         <div style="display: flex; align-items: center; gap: 6px; color: #991b1b; font-weight: 600; font-size: 15px; margin-bottom: 8px;">
           ⚠️ Analysis Complete: Vulnerabilities Detected
         </div>
-        <p style="font-size: 13px; color: #7f1d1d; margin: 0 0 16px 0; line-height: 1.5;">
+        <p style="font-size: 13px; color: #a1a1a1; margin: 0 0 16px 0; line-height: 1.5;">
           Our baseline engine scanned <strong>${data.processedUrl}</strong> and identified visual alignment exposure gaps under the transparency directives.
         </p>
-        <div style="background: #ffffff; border: 1px solid #fee2e2; padding: 12px; border-radius: 6px; font-size: 12px; font-family: monospace; color: #374151; margin-bottom: 16px;">
+        <div style="background: #111111; border: 1px solid #222222; padding: 12px; border-radius: 6px; font-size: 12px; font-family: monospace; color: #374151; margin-bottom: 16px;">
           ❌ [V-I-N-G Notice Check]: Verification flag omitted on core loop entry points.<br>
           🔒 [Structural Analysis]: 40 additional audit checkpoints locked behind verification wall.
         </div>
