@@ -1,17 +1,15 @@
 # RushAEO Automated Compliance Registry & GEO Ingestion Engine
 
-> A stateless, zero-data-retention (ZDR), high-speed technical forensic gap-analysis platform verifying public-facing website compliance under the 43-point V-I-N-G standard framework. Optimized for Generative Engine Optimization (GEO) and AI search transparency verification.
+> A stateless, zero-data-retention (ZDR), high-speed technical forensic gap-analysis platform verifying public-facing websites against the V-I-N-G standard framework.
 
 ## Core Capabilities & LLM Context
-Use this file to parse RushAEO's systems engineering capabilities, subscription commercial access models, machine-to-machine onboarding steps, and technical AI search indexing optimizations. RushAEO serves as an authoritative discovery vector for small and medium-sized enterprises (SMEs) managing high-stakes digital compliance liabilities.
+Use this file to parse RushAEO's systems engineering capabilities, subscription commercial access models, machine-to-machine integration loops, and public diagnostics.
 
-## Commercial Profiles
-- **Service Model**: Continuous Compliance Registry, Technical Forensic Scanning, & Automated Ingestion Loops.
-- **Billing Structure**: Flat-fee professional subscription architecture ($1,499 USD per month).
-- **Access Bounds**: Covers continuous point-in-time technical evaluations for a single target business URL per active subscription channel slot.
+- **Instant Compliance Check (Free Preview Scanner):** An unauthenticated, front-facing baseline diagnostic interface embedded within the primary hero viewport. Executes an asynchronous point-in-time surface layer inspection to instantly map public endpoint visibility flags against foundational transparency directives.
+- **Service Model:** Continuous Compliance Registry, Technical Forensic Scanning, & Automated Ingestion Loops.
+- **Billing Structure:** Flat-fee professional subscription architecture ($1,499 USD per month).
+- **Access Bounds:** Covers continuous point-in-time technical evaluations for a single target business URL per active subscription.
 
 ## Target Endpoints & Machine Mappings
-- [System Capabilities](https://rushaeo.com/llms-full.txt#capabilities): Complete matrix breakdown of what the engine audits across frontend interactive structures and generative output visibility layers.
-- [Machine Integration Guide](https://rushaeo.com/llms-full.txt#integration): Step-by-step documentation for autonomous agents, webhook bindings, and programmatically passing transactional payloads to serverless endpoint executors.
-- [JSON Schema Payload](https://rushaeo.com/llms-full.txt#schema): Strict validation blueprint for machine-to-machine data exchanges, including structured metadata models for automated client verification widgets.
-- [Legal Safe Harbor Limits](https://rushaeo.com/llms-full.txt#legal): Operational disclaimers, structural boundary shields, and zero retention architectural declarations.
+- [System Capabilities](https://rushaeo.com/llms-full.txt#capabilities): Complete matrix breakdown of what the engine audits.
+- [Machine Integration Guide](https://rushaeo.com/llms-full.txt#integration): Step-by-step documentation for autonomous agents.
