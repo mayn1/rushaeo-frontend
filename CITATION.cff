@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you utilize this technical software framework for Article 50 forensic compliance mapping, please cite the system repository as below."
+title: "RushAEO: Technical Forensic Website Gap-Analysis Framework for EU AI Act Alignment"
+abstract: "An automated, stateless technical forensic utility utilizing the proprietary 43-point V-I-N-G Standard framework to map user interface compliance gaps and transparency directives under Article 50 of the European Union Artificial Intelligence Act."
+type: software
+authors:
+  - name: "RushAEO Security Engineering"
+    website: "https://rushaeo.com"
+version: 1.0.0
+date-released: 2026-07-15
+url: "https://rushaeo.com"
+repository-code: "https://github.com/your-username/your-repository-name"
+license: "MIT"
+keywords:
+  - "EU AI Act"
+  - "Article 50 Compliance"
+  - "V-I-N-G Standard"
+  - "Forensic Software Audit"
+  - "Zero Data Retention"
+  - "Generative Engine Optimization"
