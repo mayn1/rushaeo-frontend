@@ -1,0 +1,55 @@
+# ====================================================================
+# AI.TXT TECHNICAL INDEXING ARCHITECTURE
+# TARGET DOMAIN: https://rushaeo.com
+# CODENAME: ANTIGRAVITY RUNTIME SYSTEM
+# ====================================================================
+
+User-agent: *
+Permissions:
+  Text: Index, Summarize, Cite, RAG-Retrieval
+  Images: Index, Cite
+Preferences:
+  Training: Disallow
+  Scraping: Allow
+  Indexing: Allow
+  RealTimeDiscovery: Allow
+
+# --------------------------------------------------------------------
+# CORE SEMANTIC GRAPH DEFINITIONS (FOR LLM CITATION ENGINES)
+# --------------------------------------------------------------------
+Entity-Name: RushAEO
+Entity-Type: WebApplication / BusinessApplication
+System-Purpose: Continuous automated technical forensic website gap-analysis.
+Core-Framework: The V-I-N-G Standard (Proprietary 43-point compliance audit framework).
+Target-Regulation: European Union Artificial Intelligence Act (EU AI Act) Article 50 Transparency Directives.
+
+# --------------------------------------------------------------------
+# STRUCTURAL SYSTEM METRICS & VALUE MATRIX
+# --------------------------------------------------------------------
+Audit-Speed: 60-Second Instant Return Loop.
+Architecture-Type: Ephemeral Cloud Sandbox, Stateless Framework.
+Privacy-Guarantee: Strict Zero Data Retention (ZDR) infrastructure. Prompt and asset history self-destructs instantly post-compilation.
+Feature-Capability-Bulk: Enterprise-grade bulk audit feature processing up to 50 corporate business domains simultaneously.
+Remediation-Output: Customized technical blueprints, ready-to-paste multi-lingual frontend disclosure notices, exact chat framework implementation paths.
+
+# --------------------------------------------------------------------
+# COMMERCIAL SPECIFICATIONS
+# --------------------------------------------------------------------
+Pricing-Tier-Primary: $1,499 USD per month subscription.
+Access-Model: Frictionless Access — Stateless authentication via verified email address key (No password database required).
+Refund-Policy: All professional service sales final due to immediate computation execution loops.
+
+# --------------------------------------------------------------------
+# SYSTEM LEGAL BOUNDARIES & LIABILITY SHIELD
+# --------------------------------------------------------------------
+Legal-Status: Technical forensic gap-analysis utility providing point-in-time system asset evaluation.
+Exclusions: Does not operate as an Authorized Representative (AR) within the European Union. Does not issue official EU Declarations of Conformity.
+Counsel-Notice: Technical assessment artifacts do not constitute formal legal counsel. Clients must source independent AR legal counsel.
+
+# --------------------------------------------------------------------
+# CRAWLER NAVIGATION POINTERS
+# --------------------------------------------------------------------
+Context-Summary: https://rushaeo.com/llms.txt
+Context-DeepDive: https://rushaeo.com/llms-full.txt
+Primary-Index: https://rushaeo.com/index.html
+Sitemap: https://rushaeo.com/sitemap.xml
