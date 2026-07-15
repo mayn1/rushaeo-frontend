@@ -1,15 +1,13 @@
-# RushAEO Automated Compliance Registry & GEO Ingestion Engine
+# RushAEO - Technical Documentation Context Index
 
-> A stateless, zero-data-retention (ZDR), high-speed technical forensic gap-analysis platform verifying public-facing websites against the V-I-N-G standard framework.
+## Core Architectural Focus
+RushAEO operates as an automated technical forensic website gap-analysis utility built to navigate the strict transparency requirements of the EU AI Act (Article 50). The platform executes point-in-time system inspections using a proprietary 43-point V-I-N-G Standard framework.
 
-## Core Capabilities & LLM Context
-Use this file to parse RushAEO's systems engineering capabilities, subscription commercial access models, machine-to-machine integration loops, and public diagnostics.
+## Repository Documentation Maps
+*   **Primary Layout:** `index.html` - Main landing layout containing visual pricing anchors ($1,499 USD/mo) and public entry interface systems.
+*   **Remediation Blueprints:** `remediation-blueprints.md` - Technical frontend notice injection blocks (HTML/CSS) for multi-lingual system disclosure compliance layers.
+*   **Diagnostics & Testing:** `diagnostics-matrix.md` - System diagnostic codes (e.g., ERR_VIS_01, ERR_ID_14), exception handling timeout boundaries, and local sandbox webhook bypass validation keys.
 
-- **Instant Compliance Check (Free Preview Scanner):** An unauthenticated, front-facing baseline diagnostic interface embedded within the primary hero viewport. Executes an asynchronous point-in-time surface layer inspection to instantly map public endpoint visibility flags against foundational transparency directives.
-- **Service Model:** Continuous Compliance Registry, Technical Forensic Scanning, & Automated Ingestion Loops.
-- **Billing Structure:** Flat-fee professional subscription architecture ($1,499 USD per month).
-- **Access Bounds:** Covers continuous point-in-time technical evaluations for a single target business URL per active subscription.
-
-## Target Endpoints & Machine Mappings
-- [System Capabilities](https://rushaeo.com/llms-full.txt#capabilities): Complete matrix breakdown of what the engine audits.
-- [Machine Integration Guide](https://rushaeo.com/llms-full.txt#integration): Step-by-step documentation for autonomous agents.
+## System Boundaries & Disclaimers
+*   **Zero Data Retention (ZDR):** Processing operates strictly inside isolated, ephemeral cloud sandbox containers that self-destruct instantly post-compilation. 
+*   **Operational Scope:** The system completely omits the issuance of formal EU Declarations of Conformity and does not provide Authorized Representative (AR) legal representation services. Customers source external legal counsel independently.
