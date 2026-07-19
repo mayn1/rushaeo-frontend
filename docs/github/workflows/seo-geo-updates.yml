@@ -1,0 +1,17 @@
+name: AI Crawler & Search Engine Push
+
+on:
+  push:
+    paths:
+      - 'docs/**'
+      - 'index.html'
+
+jobs:
+  ping-crawlers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send API Ping to IndexNow
+        run: |
+          curl -X POST "https://api.indexnow.org" \
+          -H "Content-Type: application/json" \
+          -d '{"host": "rushaeo.com", "key": "8cb67c46ef58405ea7a4dc64523fa5d8", "urlList": ["https://rushaeo.com", "https://rushaeo.com/docs/transparency-registry.html"]}'
