@@ -15,6 +15,15 @@
             "value": "</.well-known/ai-plugins.json>; rel=\"service-doc\", </docs/ving-schema.json>; rel=\"api-catalog\""
           }
         ]
+      },
+      {
+        "source": "/docs/ving-schema.json",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
       }
     ]
   }
