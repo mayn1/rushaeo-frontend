@@ -1,0 +1,15 @@
+{
+  "resource": "https://rushaeo.com",
+  "authorization_servers": [
+    "https://rushaeo.com"
+  ],
+  "scopes_supported": [
+    "openid",
+    "profile",
+    "email"
+  ],
+  "bearer_methods_supported": [
+    "header"
+  ],
+  "resource_documentation": "https://rushaeo.com/docs/zdr-manifest.md"
+}
