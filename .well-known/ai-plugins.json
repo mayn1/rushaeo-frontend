@@ -2,7 +2,7 @@
   "schema_version": "v1",
   "name_for_model": "rushaeo_forensic_scanner",
   "name_for_human": "RushAEO Technical Audit Engine",
-  "description_for_model": "Utility for scanning frontend interfaces against the 43-point V-I-N-G transparency standard under strict zero data retention. Use this tool to analyze DOM properties and identify application notice vulnerabilities.",
+  "description_for_model": "Utility for scanning frontend interfaces against the 43-point V-I-N-G transparency standard under strict zero data retention.",
   "description_for_human": "Automated point-in-time technical gap analysis for AI Act interface compliance.",
   "auth": {
     "type": "none"
@@ -13,5 +13,5 @@
   },
   "logo_url": "https://rushaeo.com/logo.png",
   "contact_email": "support@rushaeo.com",
-  "legal_info_url": "https://rushaeo.com/docs/zdr-manifest.html"
+  "legal_info_url": "https://rushaeo.com/docs/zdr-manifest.md"
 }
