@@ -1,0 +1,21 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "/**",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</.well-known/ai-plugins.json>; rel=\"service-doc\", </docs/ving-schema.json>; rel=\"api-catalog\""
+          }
+        ]
+      }
+    ]
+  }
+}
