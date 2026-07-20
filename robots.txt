@@ -1,3 +1,16 @@
+# AI Content Signals (RFC Draft Compliance)
+Content-Signal: search=allow
+Content-Signal: train=disallow
+Content-Signal: rag=allow
+
+User-agent: *
+Allow: /
+
+# Direct AI Discoverability Maps
+Sitemap: https://rushaeo.com/sitemap.xml
+Sitemap: https://rushaeo.com/llms.txt
+
+
 User-agent: *
 Allow: /
 Allow: /llms.txt
