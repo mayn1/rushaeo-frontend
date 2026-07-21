@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "name": "rushaeo-forensic-scanner",
+  "description": "RushAEO V-I-N-G transparency audit standard scanner for automated AI Act interface compliance checks.",
+  "vendor": "RushAEO",
+  "version": "1.0.0",
+  "transport": {
+    "type": "sse",
+    "url": "https://rushaeo.com/api/mcp"
+  },
+  "capabilities": {
+    "tools": true,
+    "prompts": false,
+    "resources": true
+  },
+  "tools": [
+    {
+      "name": "analyze_interface_compliance",
+      "description": "Scans DOM properties and notice disclosures against the 43-point V-I-N-G forensic standard under zero data retention.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "target_url": {
+            "type": "string",
+            "description": "The URL to analyze for technical compliance gaps."
+          }
+        },
+        "required": [
+          "target_url"
+        ]
+      }
+    }
+  ]
+}
