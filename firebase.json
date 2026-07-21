@@ -12,7 +12,7 @@
         "headers": [
           {
             "key": "Link",
-            "value": "</.well-known/ai-plugins.json>; rel=\"service-doc\", </docs/ving-schema.json>; rel=\"api-catalog\""
+            "value": "</.well-known/ai-plugins.json>; rel=\"service-doc\", </docs/ving-schema.json>; rel=\"api-catalog\", </.well-known/mcp.json>; rel=\"mcp-server\""
           }
         ]
       },
@@ -36,6 +36,15 @@
       },
       {
         "source": "/.well-known/oauth-protected-resource",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      },
+      {
+        "source": "/.well-known/mcp.json",
         "headers": [
           {
             "key": "Content-Type",
