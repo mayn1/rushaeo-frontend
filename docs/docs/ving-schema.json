@@ -1,0 +1,58 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "RushAEO V-I-N-G Forensic Audit Engine",
+    "description": "Technical gap analysis schema for AI Act interface transparency standards.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://rushaeo.com"
+    }
+  ],
+  "paths": {
+    "/api/audit": {
+      "post": {
+        "summary": "Run V-I-N-G Transparency Audit",
+        "operationId": "runAudit",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "target_url": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                },
+                "required": ["target_url"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Audit Report Output",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "score": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
