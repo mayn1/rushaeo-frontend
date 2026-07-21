@@ -17,13 +17,35 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "@id": "https://rushaeo.com/#utility",
-      "url": "https://rushaeo.com",
-      "name": "RushAEO",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "All",
-      "description": "Continuous automated technical forensic website gap-analysis for EU AI Act Article 50 compliance.",
+      <script>
+    (function() {
+      window.webMCP = window.webMCP || {};
+      window.webMCP.tools = window.webMCP.tools || [
+        {
+          name: "analyze_interface_compliance",
+          description: "Scans DOM properties and notice disclosures against the 43-point V-I-N-G forensic standard.",
+          parameters: {
+            type: "object",
+            properties: {
+              target_url: {
+                type: "string",
+                description: "The target URL to perform forensic analysis on."
+              }
+            },
+            required: ["target_url"]
+          }
+        }
+      ];
+      if (navigator.modelContextProtocol) {
+        try {
+          navigator.modelContextProtocol.registerTools(window.webMCP.tools);
+        } catch (e) {
+          // Fallback for custom agent injection frameworks
+        }
+      }
+    })();
+  </script>
+</head>
       "browserRequirements": "Requires HTML5",
       "offers": {
         "@type": "Offer",
