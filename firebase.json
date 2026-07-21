@@ -4,6 +4,8 @@
     "ignore": [
       "firebase.json",
       "**/.*",
+      "**/*.env*",
+      "**/*.bak",
       "**/node_modules/**"
     ],
     "headers": [
