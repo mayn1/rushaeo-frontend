@@ -26,6 +26,15 @@
         ]
       },
       {
+        "source": "/docs/auth.md",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "text/markdown; charset=utf-8"
+          }
+        ]
+      },
+      {
         "source": "/.well-known/openid-configuration",
         "headers": [
           {
@@ -45,6 +54,15 @@
       },
       {
         "source": "/.well-known/mcp.json",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      },
+      {
+        "source": "/.well-known/ai-plugins.json",
         "headers": [
           {
             "key": "Content-Type",
