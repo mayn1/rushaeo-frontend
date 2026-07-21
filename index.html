@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RushAEO // Forensic Article 50 Compliance & AI Verification</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .mono-text { font-family: 'JetBrains Mono', monospace; }
-    </style>
-    
-    <!-- Machine-Readable AI Engine Graph Indexing Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      <script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RushAEO - Technical Audit Engine</title>
+
+  <script>
     (function() {
       window.webMCP = window.webMCP || {};
       window.webMCP.tools = window.webMCP.tools || [
         {
           name: "analyze_interface_compliance",
           description: "Scans DOM properties and notice disclosures against the 43-point V-I-N-G forensic standard.",
+          parameters: {
+            type: "object",
+            properties: {
+              target_url: {
+                type: "string",
+                description: "The target URL to perform forensic analysis on."
+              }
+            },
+            required: ["target_url"]
+          }
+        }
+      ];
+      if (navigator.modelContextProtocol) {
+        try {
+          navigator.modelContextProtocol.registerTools(window.webMCP.tools);
+        } catch (e) {
+          // Fallback for custom agent injection frameworks
+        }
+      }
+    })();
+  </script>
+</head>
           parameters: {
             type: "object",
             properties: {
