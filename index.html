@@ -228,7 +228,7 @@
   if (auditForm) {
     auditForm.removeAttribute('action');
     
-    auditForm.addEventListener('submit', async (e) => {
+  auditForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const inputEl = document.getElementById('targetUrlInput') || e.target.querySelector('input');
@@ -244,20 +244,114 @@
         }
 
         const submitBtn = e.target.querySelector('button[type="submit"]');
-        if (submitBtn) submitBtn.innerText = 'EXECUTING BLANKET FORENSIC SCAN...';
+        if (submitBtn) submitBtn.innerText = 'EXECUTING FORENSIC DIAGNOSTIC...';
 
-        fetch('https://shiny-leaf-8785.mayn1ent.workers.dev/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ targetUrl: inputVal })
-        })
-        .catch(error => {
+        try {
+          const res = await fetch('https://shiny-leaf-8785.mayn1ent.workers.dev/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ targetUrl: inputVal })
+          });
+          
+          const data = await res.json();
+
+          // Show Diagnostic Result Popup Card
+          showDiagnosticResult(data, inputVal);
+
+        } catch (error) {
           console.error('Telemetry transit failure:', error);
-        })
-        .finally(() => {
-          window.location.href = 'https://wise.com/pay/r/2QZl0lcuP5HRFLU';
-        });
+          showDiagnosticResult({ status: 'FAIL' }, inputVal);
+        } finally {
+          if (submitBtn) submitBtn.innerText = 'RUN FREE INSTANT SCAN →';
+        }
       });
+
+      function showDiagnosticResult(data, targetUrl) {
+        const modal = document.getElementById('diagnosticModal') || document.getElementById('resultCard') || document.getElementById('adminModal');
+        if (!modal) return;
+
+        const status = (data && data.status) ? data.status.toUpperCase() : 'FAIL';
+        let badgeColorClass = 'bg-red-500/20 text-red-400 border-red-500/30';
+        let badgeText = 'FAIL / HIGH RISK';
+
+        if (status === 'PASS' || status === 'COMPLIANT') {
+          badgeColorClass = 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
+          badgeText = 'PASS / COMPLIANT';
+        } else if (status === 'AMBER' || status === 'WARNING') {
+          badgeColorClass = 'bg-amber-500/20 text-amber-400 border-amber-500/30';
+          badgeText = 'AMBER / ACTION REQUIRED';
+        }
+
+        const statusBadge = document.getElementById('diagStatusBadge');
+        if (statusBadge) {
+          statusBadge.className = `px-3 py-1 rounded-full text-xs font-mono border ${badgeColorClass}`;
+          statusBadge.innerText = badgeText;
+        }
+
+        const targetLabel = document.getElementById('diagTargetDomain');
+        if (targetLabel) targetLabel.innerText = targetUrl;
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+
+        if (status === 'PASS' || status === 'COMPLIANT') {
+          badgeColorClass = 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
+          badgeText = 'PASS / COMPLIANT';
+        } else if (status === 'AMBER' || status === 'WARNING') {
+          badgeColorClass = 'bg-amber-500/20 text-amber-400 border-amber-500/30';
+          badgeText = 'AMBER / ACTION REQUIRED';
+        }
+
+        const statusBadge = document.getElementById('diagStatusBadge');
+        if (statusBadge) {
+          statusBadge.className = `px-3 py-1 rounded-full text-xs font-mono border ${badgeColorClass}`;
+          statusBadge.innerText = badgeText;
+        }
+
+        const targetLabel = document.getElementById('diagTargetDomain');
+        if (targetLabel) targetLabel.innerText = targetUrl;
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+        } catch (error) {
+          console.error('Telemetry transit failure:', error);
+          // Fallback rendering if worker response structure varies
+          showDiagnosticResult({ status: 'FAIL' }, inputVal);
+        } finally {
+          if (submitBtn) submitBtn.innerText = 'RUN FREE INSTANT SCAN →';
+        }
+      });
+
+      function showDiagnosticResult(data, targetUrl) {
+        const modal = document.getElementById('diagnosticModal') || document.getElementById('resultCard') || document.getElementById('adminModal');
+        if (!modal) return;
+
+        const status = (data && data.status) ? data.status.toUpperCase() : 'FAIL';
+        let badgeColorClass = 'bg-red-500/20 text-red-400 border-red-500/30';
+        let badgeText = 'FAIL / HIGH RISK';
+
+        if (status === 'PASS' || status === 'COMPLIANT') {
+          badgeColorClass = 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
+          badgeText = 'PASS / COMPLIANT';
+        } else if (status === 'AMBER' || status === 'WARNING') {
+          badgeColorClass = 'bg-amber-500/20 text-amber-400 border-amber-500/30';
+          badgeText = 'AMBER / ACTION REQUIRED';
+        }
+
+        const statusBadge = document.getElementById('diagStatusBadge');
+        if (statusBadge) {
+          statusBadge.className = `px-3 py-1 rounded-full text-xs font-mono border ${badgeColorClass}`;
+          statusBadge.innerText = badgeText;
+        }
+
+        const targetLabel = document.getElementById('diagTargetDomain');
+        if (targetLabel) targetLabel.innerText = targetUrl;
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
  
 </script>
     <!-- ADMIN OVERRIDE MODAL -->
