@@ -223,15 +223,10 @@
 
 </body>
 <script>
-  const auditForm = document.querySelector('form:not(#free-scanner-form)');
-  
-  if (auditForm) {
-    auditForm.removeAttribute('action');
-    
-  auditForm.addEventListener('submit', async (e) => {
+ window.handleFreeScanSubmit = async function(e) {
         e.preventDefault();
 
-        const inputEl = document.getElementById('targetUrlInput') || e.target.querySelector('input');
+        const inputEl = document.getElementById('targetUrlInput');
         let inputVal = inputEl ? inputEl.value.trim() : '';
 
         if (!inputVal) {
@@ -254,8 +249,6 @@
           });
           
           const data = await res.json();
-
-          // Show Diagnostic Result Popup Card
           showDiagnosticResult(data, inputVal);
 
         } catch (error) {
@@ -264,8 +257,7 @@
         } finally {
           if (submitBtn) submitBtn.innerText = 'RUN FREE INSTANT SCAN →';
         }
-      });
-
+      };
       function showDiagnosticResult(data, targetUrl) {
         const modal = document.getElementById('diagnosticModal') || document.getElementById('resultCard') || document.getElementById('adminModal');
         if (!modal) return;
