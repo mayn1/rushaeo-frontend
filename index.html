@@ -230,44 +230,36 @@
     auditForm.removeAttribute('action');
     
     auditForm.addEventListener('submit', async (e) => {
-      e.preventDefault(); 
+        e.preventDefault();
 
-      let rawUrl = document.getElementById('targetUrl')?.value || '';
-      rawUrl = rawUrl.trim();
+        const inputEl = document.getElementById('targetUrlInput') || e.target.querySelector('input');
+        let inputVal = inputEl ? inputEl.value.trim() : '';
 
-      if (!rawUrl) {
-        alert('Please fill out the URL field.');
-        return;
-      }
+        if (!inputVal) {
+          alert('Please enter a domain or URL.');
+          return;
+        }
 
-      let structuredUrl = rawUrl;
-      if (structuredUrl && !/^https?:\/\//i.test(structuredUrl)) {
-        structuredUrl = 'https://' + structuredUrl;
-      }
+        if (!/^https?:\/\//i.test(inputVal)) {
+          inputVal = 'https://' + inputVal;
+        }
 
-      const payload = {
-        customerName: document.getElementById('customerName')?.value || 'Enterprise Operator',
-        customerEmail: document.getElementById('customerEmail')?.value || '',
-        targetUrl: structuredUrl,
-        declaredAiScope: ['chatbot', 'recruitment', 'biometrics', 'analytics', 'marketing_automation'] 
-      };
-
-      try {
-        const submitBtn = auditForm.querySelector('button[type="submit"]');
+        const submitBtn = e.target.querySelector('button[type="submit"]');
         if (submitBtn) submitBtn.innerText = 'EXECUTING BLANKET FORENSIC SCAN...';
 
-        await fetch('https://shiny-leaf-8785.mayn1ent.workers.dev/', {
+        fetch('https://shiny-leaf-8785.mayn1ent.workers.dev/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
+          body: JSON.stringify({ targetUrl: inputVal })
+        })
+        .catch(error => {
+          console.error('Telemetry transit failure:', error);
+        })
+        .finally(() => {
+          window.location.href = 'https://wise.com/pay/r/2QZl0lcuP5HRFLU';
         });
-      } catch (error) {
-        console.error('Telemetry transit failure:', error);
-      }
-
-      window.location.href = 'https://wise.com/pay/r/YPPMjOo5dtuym44';
-    });
-  }
+      });
+ 
 </script>
     <!-- ADMIN OVERRIDE MODAL -->
 <div id="adminModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
