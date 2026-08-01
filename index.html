@@ -259,9 +259,11 @@
         }
       };
       function showDiagnosticResult(data, targetUrl) {
-        const modal = document.getElementById('diagnosticModal') || document.getElementById('resultCard') || document.getElementById('adminModal');
-        if (!modal) return;
-
+  const modal = document.getElementById('adminModal') || document.getElementById('diagnosticModal');
+  if (!modal) {
+    alert('Scan complete for: ' + targetUrl);
+    return;
+  
         const status = (data && data.status) ? data.status.toUpperCase() : 'FAIL';
         let badgeColorClass = 'bg-red-500/20 text-red-400 border-red-500/30';
         let badgeText = 'FAIL / HIGH RISK';
